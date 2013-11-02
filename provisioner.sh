@@ -7,7 +7,7 @@ sudo apt-get install -y ruby1.9.1-dev git-core
 
 pushd `pwd`
 
-if soloist 2>/dev/null; then
+if hash soloist 2>/dev/null; then
   echo "Already installed soloist"
 else
   echo "No soloist installed"
