@@ -1,0 +1,22 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    chef_gem (0.1.0)
+
+GIT
+  remote: git://github.com/fnichol/chef-rvm.git
+  ref: 59dc482e2c39db4c378e79e10569f1becdc4bc43
+  sha: 59dc482e2c39db4c378e79e10569f1becdc4bc43
+  specs:
+    rvm (0.9.1)
+      chef_gem (>= 0.0.0)
+
+PATH
+  remote: site-cookbooks
+  specs:
+    workstation (0.1.0)
+
+DEPENDENCIES
+  rvm (>= 0)
+  workstation (>= 0)
+
