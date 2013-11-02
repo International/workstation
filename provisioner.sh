@@ -32,6 +32,7 @@ cookbook_paths:
 recipes:
 - workstation::ack
 - redisio
+- redisio::install
 EOF
 
 
