@@ -7,12 +7,18 @@ sudo apt-get install -y ruby1.9.1-dev git-core
 
 pushd `pwd`
 
-if rvm --version 2>/dev/null; then
-  gem install soloist -v 1.0.0.pre --no-ri --no-rdoc
-  gem install librarian-chef -v 0.0.2 --no-ri --no-rdoc
+if soloist 2>/dev/null; then
+  echo "No soloist installed"
+
+  if rvm --version 2>/dev/null; then
+    gem install soloist -v 1.0.0.pre --no-ri --no-rdoc
+    gem install librarian-chef -v 0.0.2 --no-ri --no-rdoc
+  else
+    sudo gem install librarian-chef -v 0.0.2 --no-ri --no-rdoc
+    sudo gem install soloist -v 1.0.0.pre --no-ri --no-rdoc
+  fi
 else
-  sudo gem install librarian-chef -v 0.0.2 --no-ri --no-rdoc
-  sudo gem install soloist -v 1.0.0.pre --no-ri --no-rdoc
+  echo "Already installed soloist"
 fi
 
 mkdir -p ~/cookbooks; cd ~/cookbooks
@@ -30,7 +36,10 @@ repo_url=https://github.com/International/workstation.git
 if [[ -d $repo_directory ]]; then
   cd $repo_directory && git pull && cd ..
 else
-  git clone $repo_url
+  git clone $repo_url $repo_directory
+  pushd $repo_directory
+  git checkout --track origin/recipes
+  popd
 fi
 
 soloist
