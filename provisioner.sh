@@ -21,17 +21,18 @@ else
   echo "Already installed soloist"
 fi
 
+repo_directory=workstation
+repo_url=https://github.com/International/workstation.git
+
 mkdir -p ~/cookbooks; cd ~/cookbooks
 
 cat > soloistrc <<EOF
 cookbook_paths:
-- $PWD
+- $PWD/$repo_directory/cookbooks
 recipes:
 - workstation::ack
 EOF
 
-repo_directory=workstation
-repo_url=https://github.com/International/workstation.git
 
 if [[ -d $repo_directory ]]; then
   cd $repo_directory && git pull && cd ..
