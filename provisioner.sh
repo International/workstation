@@ -30,9 +30,15 @@ cat > soloistrc <<EOF
 cookbook_paths:
 - $PWD/$repo_directory/cookbooks
 recipes:
+- runit
 - workstation::ack
 - redisio
 - redisio::install
+- memcached
+- workstation::git_config_defaults
+
+node_attributes:
+  owner_user: $USER
 EOF
 
 
