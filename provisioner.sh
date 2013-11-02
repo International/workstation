@@ -31,6 +31,7 @@ cookbook_paths:
 - $PWD/$repo_directory/cookbooks
 recipes:
 - workstation::ack
+- redisio
 EOF
 
 
