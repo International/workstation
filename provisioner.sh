@@ -16,16 +16,21 @@ else
 fi
 
 mkdir -p ~/cookbooks; cd ~/cookbooks
+
 cat > soloistrc <<EOF
 cookbook_paths:
 - $PWD
 recipes:
-- pivotal_workstation::ack
+- workstation::ack
 EOF
-if [[ -d pivotal_workstation ]]; then
-  cd pivotal_workstation && git pull && cd ..
+
+repo_directory=workstation
+repo_url=https://github.com/International/workstation.git
+
+if [[ -d $repo_directory ]]; then
+  cd $repo_directory && git pull && cd ..
 else
-  git clone https://github.com/pivotal/pivotal_workstation.git
+  git clone $repo_url
 fi
 
 soloist

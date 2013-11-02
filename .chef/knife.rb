@@ -8,11 +8,11 @@ chef_dir    = "#{ENV['HOME'] || ENV['HOMEDRIVE']}/.chef"
 current_dir = File.dirname(__FILE__)
 
 # chef server location and validation key
-chef_server_url           ENV['KNIFE_CHEF_SERVER_URL']
-validation_client_name    ENV['KNIFE_VALIDATION_CLIENT_NAME'] ||
-                          'chef-validator'
-validation_key            ENV['KNIFE_VALIDATION_KEY'] ||
-                          "#{chef_dir}/validation.pem"
+# chef_server_url           ENV['KNIFE_CHEF_SERVER_URL']
+# validation_client_name    ENV['KNIFE_VALIDATION_CLIENT_NAME'] ||
+#                           'chef-validator'
+# validation_key            ENV['KNIFE_VALIDATION_KEY'] ||
+#                           "#{chef_dir}/validation.pem"
 
 # user/client name and key
 node_name                 (ENV['KNIFE_USER'] || ENV['USER'] ||
