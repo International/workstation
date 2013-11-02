@@ -1,1 +1,1 @@
-execute "echo #{node["owner_user"]}"
+execute "echo #{WS_USER}"
