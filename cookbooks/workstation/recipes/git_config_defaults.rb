@@ -1,1 +1,1 @@
-# execute 
+execute "echo #{node["owner_user"]}"
