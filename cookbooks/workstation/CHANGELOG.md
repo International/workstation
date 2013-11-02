@@ -1,11 +1,11 @@
-ack CHANGELOG
-=============
+workstation CHANGELOG
+=====================
 
-This file is used to list changes made in each version of the ack cookbook.
+This file is used to list changes made in each version of the workstation cookbook.
 
 0.1.0
 -----
-- [your_name] - Initial release of ack
+- [your_name] - Initial release of workstation
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.

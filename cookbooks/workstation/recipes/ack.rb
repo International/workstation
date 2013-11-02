@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: ack
+# Cookbook Name:: workstation
 # Recipe:: default
 #
 # Copyright 2013, George Opritescu
