@@ -8,6 +8,8 @@ sudo apt-get install -y ruby1.9.1-dev git-core
 pushd `pwd`
 
 if soloist 2>/dev/null; then
+  echo "Already installed soloist"
+else
   echo "No soloist installed"
 
   if rvm --version 2>/dev/null; then
@@ -17,8 +19,6 @@ if soloist 2>/dev/null; then
     sudo gem install librarian-chef -v 0.0.2 --no-ri --no-rdoc
     sudo gem install soloist -v 1.0.0.pre --no-ri --no-rdoc
   fi
-else
-  echo "Already installed soloist"
 fi
 
 repo_directory=workstation
