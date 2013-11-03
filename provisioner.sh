@@ -39,15 +39,8 @@ recipes:
 - memcached
 - workstation::git_config_defaults
 
-default_attributes:
-  workstation:
-    git_config_defaults:
-      git_config_owner_user: ninjulica
-override_attributes:
-  workstation:
-    git_config_defaults:
-      git_config_owner_user: ninjulica
 node_attributes:
+  bla: ninja2
   workstation:
     git_config_defaults:
       git_config_owner_user: ninjulica
