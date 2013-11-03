@@ -50,7 +50,7 @@ node_attributes:
     user_installs:
       -
         user: vagrant
-        version: "1.9.3-p194"
+        version: stable
 EOF
 
 if [[ -d $repo_directory ]]; then
