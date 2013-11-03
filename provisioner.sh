@@ -49,7 +49,8 @@ node_attributes:
   rvm:
     user_installs:
       user: vagrant
-      default_ruby: '1.9.3-p194',
+      default_ruby: '1.9.3-p194'
+      version: stable
       rubies: 
       - '1.9.3-p194'
 EOF
