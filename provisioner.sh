@@ -51,7 +51,7 @@ node_attributes:
       user: vagrant
       default_ruby: '1.9.3-p194',
       rubies: 
-        - '1.9.3-p194'
+      - '1.9.3-p194'
 EOF
 
 if [[ -d $repo_directory ]]; then
