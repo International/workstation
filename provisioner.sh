@@ -7,7 +7,7 @@ sudo apt-get install -y ruby1.9.1-dev git-core
 
 repo_directory=workstation
 repo_url=https://github.com/International/workstation.git
-branch=no_cheffile
+branch=recipes
 soloist_version=0.9.7
 
 
