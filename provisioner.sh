@@ -38,7 +38,7 @@ recipes:
 - memcached
 - workstation::git_config_defaults
 - workstation::vlc
-- change_shell_to_zsh
+- workstation::change_shell_to_zsh
 
 node_attributes:
   solo_username: vagrant
