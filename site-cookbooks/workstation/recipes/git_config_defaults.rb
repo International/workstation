@@ -4,7 +4,7 @@ execute "setting color.ui true" do
 end
 
 execute "configure username" do
-  command "git config --global user.name #{node["solo_git_name"]}"
+  command "git config --global user.name '#{node["solo_git_name"]}'"
   user node["solo_username"]
 end
 
