@@ -39,7 +39,6 @@ recipes:
 - workstation::git_config_defaults
 - workstation::vlc
 - workstation::change_shell_to_zsh
-- rvm::vagrant
 - rvm::user
 
 
@@ -49,8 +48,9 @@ node_attributes:
   solo_git_email: ssscripting@gmail.com
   rvm:
     user_installs:
-      user: vagrant
-      version: "1.9.3-p194"
+      -
+        user: vagrant
+        version: "1.9.3-p194"
 EOF
 
 if [[ -d $repo_directory ]]; then
