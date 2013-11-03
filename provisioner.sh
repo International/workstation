@@ -23,6 +23,7 @@ fi
 
 repo_directory=workstation
 repo_url=https://github.com/International/workstation.git
+branch=no_cheffile
 
 mkdir -p ~/cookbooks; cd ~/cookbooks
 
@@ -50,7 +51,7 @@ if [[ -d $repo_directory ]]; then
 else
   git clone $repo_url $repo_directory
   pushd $repo_directory
-  git checkout --track origin/recipes
+  git checkout --track origin/$branch
   popd
 fi
 
