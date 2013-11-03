@@ -1,9 +1,4 @@
-execute "bash -c 'git config --global color.ui true'" do
+execute "setting color.ui true" do
+  command "git config --global color.ui true"
   user  node["solo_username"]
-  group node["solo_username"]
-end
-
-execute "bash -c 'git config --global user.name #{node["solo_git_name"]} user.email #{node["solo_git_email"]}'" do
-  user  node["solo_username"]
-  group node["solo_username"]
 end
