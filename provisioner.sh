@@ -39,11 +39,19 @@ recipes:
 - workstation::git_config_defaults
 - workstation::vlc
 - workstation::change_shell_to_zsh
+- rvm::user
+
 
 node_attributes:
   solo_username: vagrant
   solo_git_name: "George Opritescu"
   solo_git_email: ssscripting@gmail.com
+  rvm:
+    user_installs:
+      user: vagrant
+      default_ruby: '1.9.3-p194',
+      rubies: 
+        - '1.9.3-p194'
 EOF
 
 if [[ -d $repo_directory ]]; then
