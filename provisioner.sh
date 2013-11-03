@@ -40,6 +40,7 @@ recipes:
 
 node_attributes:
   owner_user: $USER
+  git_config_owner_user: ninjulica
 EOF
 
 
