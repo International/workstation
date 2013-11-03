@@ -42,10 +42,7 @@ recipes:
 - workstation::git_config_defaults
 
 node_attributes:
-  bla: ninja2
-  workstation:
-    git_config_defaults:
-      git_config_owner_user: ninjulica
+  solo_username: vagrant
 EOF
 
 
