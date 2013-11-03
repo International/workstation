@@ -37,6 +37,7 @@ recipes:
 - redisio::install
 - memcached
 - workstation::git_config_defaults
+- workstation::vlc
 
 node_attributes:
   solo_username: vagrant
