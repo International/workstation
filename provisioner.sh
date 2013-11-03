@@ -10,7 +10,6 @@ repo_url=https://github.com/International/workstation.git
 branch=recipes
 soloist_version=0.9.7
 
-
 pushd `pwd`
 
 if hash soloist 2>/dev/null; then
@@ -20,10 +19,8 @@ else
 
   if rvm --version 2>/dev/null; then
     gem install soloist -v $soloist_version --no-ri --no-rdoc
-    # gem install librarian-chef -v 0.0.2 --no-ri --no-rdoc
   else
     sudo gem install soloist -v $soloist_version --no-ri --no-rdoc
-    # sudo gem install librarian-chef -v 0.0.2 --no-ri --no-rdoc
   fi
 fi
 
@@ -44,7 +41,6 @@ recipes:
 node_attributes:
   solo_username: vagrant
 EOF
-
 
 if [[ -d $repo_directory ]]; then
   cd $repo_directory && git pull && cd ..
