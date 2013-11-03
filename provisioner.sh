@@ -40,7 +40,7 @@ recipes:
 
 node_attributes:
   solo_username: vagrant
-  solo_git_name: George Opritescu
+  solo_git_name: "George Opritescu"
   solo_git_email: ssscripting@gmail.com
 EOF
 
