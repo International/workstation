@@ -1,0 +1,9 @@
+site "http://community.opscode.com/api/v1"
+
+cookbook 'rvm', :git => 'git://github.com/fnichol/chef-rvm.git', :ref => '59dc482e2c39db4c378e79e10569f1becdc4bc43'
+cookbook "curl"
+cookbook "postgresql"
+cookbook "database"
+cookbook "redisio"
+cookbook "memcached"
+cookbook "zsh"
