@@ -8,4 +8,5 @@ end
 bash "setup_zshrc" do
   command "cp -f #{node["solo_home"]}/.oh-my-zsh/templates/zshrc.zsh-template #{node["solo_home"]}/.zshrc"
   action :nothing
+  user node["solo_username"]
 end
