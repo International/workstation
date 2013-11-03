@@ -28,6 +28,7 @@ mkdir -p ~/cookbooks; cd ~/cookbooks
 
 cat > soloistrc <<EOF
 cookbook_paths:
+- $PWD/$repo_directory/site-cookbooks
 - $PWD/$repo_directory/cookbooks
 recipes:
 - runit
