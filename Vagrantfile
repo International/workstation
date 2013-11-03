@@ -4,7 +4,7 @@
 Vagrant.configure("2") do |config|
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "u13"
-  config.vm.provision :shell, :path => "provisioner.sh"
+  config.vm.provision :shell, :path => "provisioner.sh", :privileged => false
 
   # config.vm.provision :chef_solo do |chef|
   #   chef.cookbooks_path = "cookbooks"
