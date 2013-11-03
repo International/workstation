@@ -39,8 +39,9 @@ recipes:
 - workstation::git_config_defaults
 
 node_attributes:
-  owner_user: $USER
-  git_config_owner_user: ninjulica
+  workstation:
+    git_config_defaults:
+      git_config_owner_user: ninjulica
 EOF
 
 
