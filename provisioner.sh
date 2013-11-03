@@ -25,6 +25,8 @@ fi
 
 mkdir -p ~/cookbooks; cd ~/cookbooks
 
+solo_username=vagrant
+
 cat > soloistrc <<EOF
 cookbook_paths:
 - $PWD/$repo_directory/site-cookbooks
@@ -39,10 +41,11 @@ recipes:
 - workstation::vlc
 - workstation::change_shell_to_zsh
 - rvm::user
-
+- workstation::clone_zsh
 
 node_attributes:
-  solo_username: vagrant
+  solo_username: $solo_username
+  solo_home: /home/$solo_username
   solo_git_name: "George Opritescu"
   solo_git_email: ssscripting@gmail.com
   rvm:
