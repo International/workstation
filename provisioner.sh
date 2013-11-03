@@ -12,16 +12,15 @@ soloist_version=0.9.7
 
 pushd `pwd`
 
-if hash soloist 2>/dev/null; then
-  echo "Already installed soloist"
-else
-  echo "No soloist installed"
-
-  if rvm --version 2>/dev/null; then
-    gem install soloist -v $soloist_version --no-ri --no-rdoc
+if rvm --version 2>/dev/null; then
+  if soloist 2>/dev/null; then
+    echo "Already have soloist under rvm"
   else
-    sudo gem install soloist -v $soloist_version --no-ri --no-rdoc
+    gem install soloist -v $soloist_version --no-ri --no-rdoc
   fi
+else
+  echo "No RVM installed, installing with sudo"
+  sudo gem install soloist -v $soloist_version --no-ri --no-rdoc
 fi
 
 mkdir -p ~/cookbooks; cd ~/cookbooks
