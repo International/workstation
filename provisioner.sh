@@ -55,5 +55,5 @@ else
   popd
 fi
 
-LOG_LEVEL=debug soloist
+soloist
 popd
