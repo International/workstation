@@ -39,6 +39,7 @@ recipes:
 - workstation::git_config_defaults
 - workstation::vlc
 - workstation::change_shell_to_zsh
+- rvm::vagrant
 - rvm::user
 
 
@@ -49,10 +50,7 @@ node_attributes:
   rvm:
     user_installs:
       user: vagrant
-      default_ruby: '1.9.3-p194'
-      version: stable
-      rubies: 
-      - '1.9.3-p194'
+      version: "1.9.3-p194"
 EOF
 
 if [[ -d $repo_directory ]]; then
