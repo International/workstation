@@ -13,7 +13,7 @@ soloist_version=0.9.7
 pushd `pwd`
 
 if rvm --version 2>/dev/null; then
-  if soloist 2>/dev/null; then
+  if gem list | grep -i soloist; then
     echo "Already have soloist under rvm"
   else
     gem install soloist -v $soloist_version --no-ri --no-rdoc
